@@ -1,0 +1,47 @@
+    1  clear
+    2  mkdir lab2
+    3  cd lab2
+    4  cp /usr/in[now hit a tab]
+    5  cp /usr/include/
+    6  cp /usr/include/std testfile
+    7  cp /usr/include/stdio.h testfile
+    8  ls -al
+    9  ls -l
+   10  mv testfile test
+   11  ls -l test 
+   12  cp test test2
+   13  rm test2
+   14  ls
+   15  cat test
+   16  less test
+   17  head test
+   18  head -n 20 test
+   19  tail.text
+   20  tail test
+   21  ls -l
+   22  chmod a+x test
+   23  ls -l
+   24  chmod 640 test
+   25  ls- l
+   26  ls -l
+   27  chmod 777  test
+   28  ls -l
+   29  chmod 644 test
+   30  cat test | more
+   31  ls -al >listing
+   32  cat listing
+   33  echo "KNUcat listing" >> listing
+   34  cat listing
+   35  echo "KNUcat listing" >> listing
+   36  echo "echo "KNUcat listing" >> listing" >> listing
+   37  cat listing
+   38  vi listing
+   39  echo "KNU" >> listing
+   40  cat listing
+   41  wc -l < listing
+   42  grep putc /usr/include/*.h
+   43  cat /etc/passwd | grep user_name
+   44  cat /etc/passwd | grep knu
+   45  cat /etc/passwd | grep jaehyeonha
+   46  history
+   47  history > lab2_s2021115737.log
