@@ -1,0 +1,83 @@
+Starting program: /root/Lab_SystemProgramming_class/lab4_s2021115737/ls1 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[Inferior 1 (process 5310) exited normally]
+No source file named ls1.c.
+Breakpoint 1 (ls1.c:10) pending.
+Starting program: /root/Lab_SystemProgramming_class/lab4_s2021115737/ls1 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[Inferior 1 (process 5410) exited normally]
+Breakpoint 2 at 0x55555555525e
+Starting program: /root/Lab_SystemProgramming_class/lab4_s2021115737/ls1 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 2, 0x000055555555525e in do_ls ()
+Single stepping until exit from function do_ls,
+which has no line number information.
+__opendir (name=0x555555556004 ".") at ../sysdeps/unix/sysv/linux/opendir.c:82
+82	../sysdeps/unix/sysv/linux/opendir.c: No such file or directory.
+$1 = {DIR *(const char *)} 0x7ffff7e722f0 <__opendir>
+77	in ../sysdeps/unix/sysv/linux/opendir.c
+83	in ../sysdeps/unix/sysv/linux/opendir.c
+86	in ../sysdeps/unix/sysv/linux/opendir.c
+133	in ../sysdeps/unix/sysv/linux/opendir.c
+0x0000555555555272 in do_ls ()
+Undefined command: "lit".  Try "help".
+128	in ../sysdeps/unix/sysv/linux/opendir.c
+Continuing.
+[Inferior 1 (process 5468) exited normally]
+No source file named ls1.c.
+Breakpoint 3 (ls1.c:13) pending.
+Starting program: /root/Lab_SystemProgramming_class/lab4_s2021115737/ls1 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 2, 0x000055555555525e in do_ls ()
+Starting program: /root/Lab_SystemProgramming_class/lab4_s2021115737/ls1 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 2, 0x000055555555525e in do_ls ()
+Single stepping until exit from function do_ls,
+which has no line number information.
+__opendir (name=0x555555556004 ".") at ../sysdeps/unix/sysv/linux/opendir.c:82
+82	../sysdeps/unix/sysv/linux/opendir.c: No such file or directory.
+83	in ../sysdeps/unix/sysv/linux/opendir.c
+86	in ../sysdeps/unix/sysv/linux/opendir.c
+Continuing.
+[Inferior 1 (process 5836) exited normally]
+No source file named ls1.c.
+Breakpoint 4 (ls1.c:14) pending.
+Starting program: /root/Lab_SystemProgramming_class/lab4_s2021115737/ls1 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 2, 0x000055555555525e in do_ls ()
+Single stepping until exit from function do_ls,
+which has no line number information.
+0x0000555555555211 in main ()
+Single stepping until exit from function main,
+which has no line number information.
+__libc_start_call_main (main=main@entry=0x5555555551e9 <main>, argc=argc@entry=1, argv=argv@entry=0x7fffffffdc68) at ../sysdeps/nptl/libc_start_call_main.h:74
+74	../sysdeps/nptl/libc_start_call_main.h: No such file or directory.
+[Inferior 1 (process 6005) exited normally]
+The program is not being run.
+Starting program: /root/Lab_SystemProgramming_class/lab4_s2021115737/ls1 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 2, 0x000055555555525e in do_ls ()
+Single stepping until exit from function do_ls,
+which has no line number information.
+__opendir (name=0x555555556004 ".") at ../sysdeps/unix/sysv/linux/opendir.c:82
+82	../sysdeps/unix/sysv/linux/opendir.c: No such file or directory.
+83	in ../sysdeps/unix/sysv/linux/opendir.c
+invalid_name (name=0x555555556004 ".") at ../sysdeps/unix/sysv/linux/opendir.c:33
+33	in ../sysdeps/unix/sysv/linux/opendir.c
+$2 = {_Bool (const char *)} 0x7ffff7e72312 <__opendir+34>
+__opendir (name=0x555555556004 ".") at ../sysdeps/unix/sysv/linux/opendir.c:86
+86	in ../sysdeps/unix/sysv/linux/opendir.c
+Continuing.
+[Inferior 1 (process 6084) exited normally]
