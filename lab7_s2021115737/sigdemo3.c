@@ -3,6 +3,7 @@
 #include <unistd.h>
 
 int time;
+void f(int);
 
 int main()
 {
