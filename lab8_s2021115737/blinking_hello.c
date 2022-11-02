@@ -1,46 +1,67 @@
 #include <stdio.h>
-#include <curses.h>
 #include <unistd.h>
-#include <termios.h>
+#include <curses.h>
+#include <sys/time.h>
+#include <signal.h>
 
+#define	MESSAGE	"hello world"
+#define BLANK   "           "
 
-int main() {
-    struct termios info, new_info;
-    char input;
+void move_msg(int);
+int set_ticker(int);
 
-    initscr();
-    clear();
+int main()
+{
+	void	move_msg(int);	
+    int	delay;
 
-    tcgetattr(STDIN_FILENO, &info);
-    new_info = info;
-    new_info.c_lflag &= ~ICANON;
-    new_info.c_lflag &= ~ECHO;
-    new_info.c_cc[VMIN] = 0;
-    new_info.c_cc[VTIME] = 0;
+	initscr();
+	crmode();
+	noecho();
+	clear();
+		
+    delay=2000;
 
-    tcsetattr(STDIN_FILENO, TCSANOW, &new_info);
+	move(10,20);		
+	addstr(MESSAGE);
+    refresh();		
+	signal(SIGALRM, move_msg );
+	set_ticker( delay );
 
-    while(1) {
-        if(read(STDIN_FILENO, &input, 1) > 0)
-            break;
+	while(1)
+	{
+		getch();
+		break;
+	}
+	endwin();
+	return 0;
+}
 
-        move(10, 20);
-        addstr("Hellow, world");
-        move(LINES-1, 0);
-        refresh();
+void move_msg(int signum)
+{	
+    move( 10, 20 );
+	addstr( BLANK );
+    refresh();	
+   
+    sleep(1);
 
-        sleep(1);
+	move( 10, 20 );		
+	addstr( MESSAGE );		
+	refresh();	  
+}
 
-        move(10, 20);
-        addstr("             ");
-        move(LINES-1, 0);
-        refresh();
+int set_ticker(int n_msecs)
+{
+    struct itimerval new_timeset;
+    long n_sec,n_usecs;
 
-        sleep(1);
-    }
-    
-    tcsetattr(STDIN_FILENO, TCSANOW, &info);
-    endwin();
+    n_sec=n_msecs/1000;
+    n_usecs = (n_msecs % 1000) * 1000L;
 
-    return 0;
+    new_timeset.it_interval.tv_sec = n_sec;
+    new_timeset.it_interval.tv_usec = n_usecs;
+    new_timeset.it_value.tv_sec = n_sec;
+    new_timeset.it_value.tv_usec = n_usecs;
+
+    return setitimer(ITIMER_REAL,&new_timeset,NULL);
 }
