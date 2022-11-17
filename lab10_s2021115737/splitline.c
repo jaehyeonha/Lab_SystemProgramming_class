@@ -3,14 +3,19 @@
 #include	<string.h>
 #include	"smsh.h"
 
+int end = 1;
+
 char * next_cmd(char *prompt, FILE *fp)
 {
 	char	*buf ; 				
 	int	bufspace = 0;			
 	int	pos = 0;			
 	int	c;				
+	
+	if(end==1){
+		printf("%s", prompt);	
+	}
 
-	printf("%s", prompt);				
 	while( ( c = getc(fp)) != EOF ) {
 
 
@@ -22,11 +27,14 @@ char * next_cmd(char *prompt, FILE *fp)
 			bufspace += BUFSIZ;		
 		}
 
-		if ( c == ';')
+		if ( c == ';'){
+			end = 0;
             break;
-		if ( c == '\n' )
+		}
+		if ( c == '\n' ){
+			end = 1;
 			break;
-
+		}
 
 		buf[pos++] = c;
 	}
