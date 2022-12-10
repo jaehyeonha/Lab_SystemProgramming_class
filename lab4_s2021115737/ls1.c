@@ -8,7 +8,7 @@ int main(int ac, int *av[])
 {
     if (ac == 1)
         do_ls(".");
-    el
+    else
         while (--ac){
             printf("%s:\n",*++av);
             do_ls(*av);
